@@ -1,9 +1,8 @@
-import React, { useMemo } from "react";
+import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { SvgIconTypeMap } from "@mui/material";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
 import { Dashboard } from "../pages/dashboard";
-import Account from "../pages/account";
 import FarmersRecordsTable from "../pages/pastData";
 
 interface RouterElement {

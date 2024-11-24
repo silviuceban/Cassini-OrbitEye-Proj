@@ -1,4 +1,4 @@
-import React, { BaseSyntheticEvent, useState } from "react";
+import React, { useState } from "react";
 import {
   Table,
   TableBody,

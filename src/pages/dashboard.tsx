@@ -114,10 +114,10 @@ export function Dashboard() {
     <div className="mb-3 flex w-full flex-col gap-3 p-3">
       {isLoading && <FullScreenLoader />}
 
-      <div className="flex flex-row justify-center gap-3">
+      <div className="flex flex-wrap justify-center gap-3">
         <div
           className={cn(
-            "bg-map flex min-h-[500px] basis-[1000px] flex-col items-center justify-center rounded-lg p-4",
+            "m-4 flex min-h-[500px] min-w-[500px] basis-[1000px] flex-col items-center justify-center rounded-lg bg-map p-4",
             { "bg-selectedMap": !!selectedArea },
           )}
           onClick={() => setSelectedArea("point")}
@@ -129,7 +129,7 @@ export function Dashboard() {
             </Button>
           </div> */}
         </div>
-        <div className="flex w-full basis-[300px] flex-col items-end gap-6 px-5">
+        <div className="flex w-full min-w-[200px] flex-col items-end gap-6 px-5 xl:basis-[300px]">
           <p>Select the poligon and the prediction period</p>
           <FormControl fullWidth>
             <InputLabel variant="standard" htmlFor="uncontrolled-native">
@@ -145,9 +145,9 @@ export function Dashboard() {
                 setSelectedPeriod(e.target.value);
               }}
             >
-              <option value="3">3 months</option>
-              <option value="6">6 months</option>
-              <option value="9">9 months</option>
+              <option value="3">3 months from now</option>
+              <option value="6">6 months from now</option>
+              <option value="9">9 months from now</option>
             </NativeSelect>
           </FormControl>
 

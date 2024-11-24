@@ -9,7 +9,7 @@ import { BrowserRouter } from "react-router-dom";
 function Layout({ children }: PropsWithChildren) {
   return (
     <div className="flex w-full flex-col">
-      <BrowserRouter>
+      <BrowserRouter basename="/">
         <Header />
         <main className="flex">{children}</main>
       </BrowserRouter>
